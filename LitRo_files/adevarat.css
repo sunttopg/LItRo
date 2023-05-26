@@ -1,0 +1,391 @@
+*{
+    margin:0%;
+    padding:0%;
+    font-family:unset;
+}
+
+.hero{
+    background:#1d2026;
+    min-height: 100vh; 
+    width: 100%;
+    color:#fff;
+    position: relative;
+}
+nav{
+    display:flex;
+    align-items: center;
+    padding: 20px 8%;
+
+}
+
+nav .logo{
+    width: 250px;
+    cursor: pointer;
+    margin-left: -50px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.dropdown{
+    display:flex;
+    justify-content:center;
+    margin: top 30px;
+    margin-left: 500px;
+    list-style-type:none;
+
+}
+a{
+    display:block;
+    width:200px;
+    background-color: #1d2026;
+    color:rgb(255, 255, 255);
+    padding:10px 0;
+    font-size:1.6rem;
+    text-decoration:none;
+    text-align:center;
+}
+a:hover{
+    background-color: rgb(190, 16, 16);
+}
+.bac{
+    list-style-type:none;
+    display:none;
+}
+.dropdown li:nth-child(1):hover .bac{
+    display:block;
+}
+.alti{
+    list-style-type:none;
+    display:none;
+}
+.dropdown li:nth-child(2):hover .alti{
+    display:block;
+}
+.poezie{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.bac li:nth-child(1):hover .poezie{
+    display:block;
+}
+.narativ{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.bac li:nth-child(2):hover .narativ{
+    display:block;
+}
+.eminescu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+
+}
+.poezie li:nth-child(1):hover .eminescu{
+    display:block;
+}
+.alexandrescu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(2):hover .alexandrescu{
+    display:block;
+}
+.alecsandri{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(3):hover .alecsandri{
+    display:block;
+}
+.goga{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(4):hover .goga{
+    display:block;
+}
+.cosbuc{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(5):hover .cosbuc{
+    display:block;
+}
+.bacovia{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(6):hover .bacovia{
+    display:block;
+}
+.arghezi{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(7):hover .arghezi{
+    display:block;
+}
+.barbu{list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(8):hover .barbu{
+    display:block;
+}
+.blaga{list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(9):hover .blaga{
+    display:block;
+}
+.voinea{list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(10):hover .voinea{
+    display:block;
+}
+.stanescu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(11):hover .stanescu{
+    display:block;
+}
+.pillat{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(12):hover .pillat{
+    display:block;
+}
+.voiculescu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.poezie li:nth-child(13):hover .voiculescu{
+    display:block;
+}
+.caragiale{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.narativ li:nth-child(1):hover .caragiale{
+    display:block;
+}
+.slavici{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+}
+.narativ li:nth-child(2):hover .slavici{
+    display:block;
+}
+.eliade{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(3):hover .eliade{
+    display:block;
+}
+.sadoveanu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(4):hover .sadoveanu{
+    display:block;
+}
+.rebreanu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(5):hover .rebreanu{
+    display:block;
+}
+.petrescu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(6):hover .petrescu{
+    display:block;
+}
+.calinescu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(7):hover .calinescu{
+    display:block;
+}
+.preda{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(8):hover .preda{
+    display:block;
+}
+.sorescu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(9):hover .sorescu{
+    display:block;
+}
+.creanga{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(10):hover .creanga{
+    display:block;
+}
+.negruzzi{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(11):hover .negruzzi{
+    display:block;
+}
+.nedelciu{
+    list-style-type:none;
+    display:none;
+    transform:translateX(150px) translateY(-50px);
+    position:absolute;
+    
+}
+.narativ li:nth-child(12):hover .nedelciu{
+
+    display:block;
+}
+button{
+    margin-left: 20px;
+    background: #d87b81;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer; 
+    transition: background 0.5s;
+}
+
+button span{
+    display: block;
+    background: #999;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-left: 2px ;
+    transition: background 0.5s, margin-left 0.5s;
+}
+.lamp-container{
+    position: absolute;
+    top: 0;
+    left: 22%;
+    width: 200px;
+}
+.lamp{
+    width:100% ;
+
+}
+.light{
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 704px;
+    margin-left: -10px;
+    opacity: 0;
+    transition:opacity 0.5s ;    
+}
+.text-container {
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left:  50%; ;
+}
+.text-container h1{
+    font-size: 50px;
+    font-weight: 400;
+
+}
+.text-container a{
+    text-decoration: none;
+    background:#d60917;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius:30px ;
+}
+.active{
+    background: #d60917;
+}
+.active span{
+    background:#fff ;
+    margin-left: 31px;
+}
+.on{
+    opacity: 1;
+}
+
+

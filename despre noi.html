@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <title>LitRo</title>
+      <style>
+         *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            background: #1d2026 ;
+        }
+        .dropdown{
+            display:flex;
+            justify-content:center;
+            margin-top:30px;
+            list-style-type:none;
+
+        }
+        a{
+            display:block;
+            width:200px;
+            background-color: #1d2026;
+            color:rgb(255, 255, 255);
+            padding:10px 0;
+            font-size:1.2rem;
+            text-decoration:none;
+            text-align:center;
+        }
+        a:hover{
+            background-color: rgb(201, 114, 114);
+        }
+        .bac{
+            list-style-type:none;
+            display:none;
+        }
+        .dropdown li:nth-child(1):hover .bac{
+            display:block;
+        }
+        .alti{
+            list-style-type:none;
+            display:none;
+        }
+        .dropdown li:nth-child(2):hover .alti{
+            display:block;
+        }
+        .poezie{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .bac li:nth-child(1):hover .poezie{
+            display:block;
+        }
+        .narativ{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .bac li:nth-child(2):hover .narativ{
+            display:block;
+        }
+        .eminescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+
+        }
+        .poezie li:nth-child(1):hover .eminescu{
+            display:block;
+        }
+        .alexandrescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(2):hover .alexandrescu{
+            display:block;
+        }
+        .alecsandri{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(3):hover .alecsandri{
+            display:block;
+        }
+        .goga{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(4):hover .goga{
+            display:block;
+        }
+        .cosbuc{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(5):hover .cosbuc{
+            display:block;
+        }
+        .bacovia{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(6):hover .bacovia{
+            display:block;
+        }
+        .arghezi{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(7):hover .arghezi{
+            display:block;
+        }
+        .barbu{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(8):hover .barbu{
+            display:block;
+        }
+        .blaga{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(9):hover .blaga{
+            display:block;
+        }
+        .voinea{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(10):hover .voinea{
+            display:block;
+        }
+        .stanescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(11):hover .stanescu{
+            display:block;
+        }
+        .pillat{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(12):hover .pillat{
+            display:block;
+        }
+        .voiculescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(13):hover .voiculescu{
+            display:block;
+        }
+        .caragiale{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .narativ li:nth-child(1):hover .caragiale{
+            display:block;
+        }
+        .slavici{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .narativ li:nth-child(2):hover .slavici{
+            display:block;
+        }
+        .eliade{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(3):hover .eliade{
+            display:block;
+        }
+        .sadoveanu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(4):hover .sadoveanu{
+            display:block;
+        }
+        .rebreanu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(5):hover .rebreanu{
+            display:block;
+        }
+        .petrescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(6):hover .petrescu{
+            display:block;
+        }
+        .calinescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(7):hover .calinescu{
+            display:block;
+        }
+        .preda{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(8):hover .preda{
+            display:block;
+        }
+        .sorescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(9):hover .sorescu{
+            display:block;
+        }
+        .creanga{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(10):hover .creanga{
+            display:block;
+        }
+        .negruzzi{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(11):hover .negruzzi{
+            display:block;
+        }
+        .nedelciu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(12):hover .nedelciu{
+
+            display:block;
+        }
+        .nationali{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .alti li:nth-child(1):hover .nationali{
+            display:block;
+        }
+        .internationali{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .alti li:nth-child(2):hover .internationali{
+            display:block;
+        }
+            
+        
+
+
+    </style>
+    </head>
+    <body>
+  
+        
+         <div class="container">
+            <ul class="dropdown">
+                <li><a href="bac.html">BAC &#8801;</a>
+                <ul class="bac">
+                    <li><a href="poezie.html">Poezie</a>
+                    <ul class="poezie">
+                        <li><a href="eminescu.html">Mihai Eminescu</a>
+                        <ul class="eminescu">
+                            <li><a href="luceafarul.html">"Luceafărul"</a></li>
+                            <li><a href="floare.html">"Floare albastră"</a></li>
+                            </ul></li>
+                        <li><a href="alexandrescu.html">Grigore Alexandrescu</a>
+                        <ul class="alexandrescu">
+                            <li><a href="umbra.html">"Umbra lui Mircea la Cozia"</a></li>
+                        </ul></li>
+                        <li><a href="alecsandri.html">Vasile Alecsandri</a>
+                        <ul class="alecsandri">
+                            <li><a href="malul.html">"Malul Siretului"</a></li>
+                        </ul></li>
+                        <li><a href="goga.html">Octavian Goga</a>
+                        <ul class="goga">
+                            <li><a href="de.html">"De demult"</a></li>
+                            <li><a href="rugaciune.html">"Rugăciune"</a></li>
+                        </ul></li>
+                        <li><a href="cosbuc.html">George Coșbuc</a>
+                        <ul class="cosbuc">
+                            <li><a href="moartea.html">"Moartea lui Fulger"</a></li>
+                        </ul> </li>
+                        <li><a href="bacovia.html">George Bacovia</a>
+                        <ul class="bacovia">
+                            <li><a href="plumb.html">"Plumb"</a></li>
+                            <li><a href="#">"Lacustră"</a></li>
+                        </ul></li>
+                        <li><a href="arghezi">Tudor Arghezi</a>
+                        <ul class="arghezi">
+                            <li><a href="testament.html">"Testament"</a></li>
+                            <li><a href="flori.html">"Flori de mucigai"</a></li>
+                        </ul></li>
+                        <li><a href="barbu.html">Ion Barbu</a>
+                        <ul class="barbu">
+                            <li><a href="riga.html">"Riga Crypto si Lapona Enigel"</a></li>
+                        </ul></li>
+                        <li><a href="blaga.html">Lucian Blaga</a>
+                        <ul class="blaga">
+                            <li><a href="eu.html">"Eu nu strivesc corola de minuni a lumii"</a></li>
+                        </ul></li>
+                        <li><a href="vinea.html">Ion Vinea</a>
+                        <ul class="voinea">
+                            <li><a href="ora.html">"Ora fântânilor"</a></li>
+                        </ul></li>
+                        <li><a href="stanescu.html">Nichita Stănescu</a>
+                        <ul class="stanescu">
+                            <li><a href="leoaica.html">"Leoaică,tânără,iubirea.."</a></li>
+                        </ul></li>
+                        <li><a href="pillat.html">Ion Pillat</a>
+                        <ul class="pillat">
+                            <li><a href="aci.html">"Aci sosi pe vremuri"</a></li>
+                        </ul></li>
+                        <li><a href="voiculescu.html">Vasile Voiculescu</a>
+                        <ul class="voiculescu">
+                            <li><a href="in.html">"În grăadina Ghetsemani"</a></li>
+                        </ul></li>
+                    </ul></li>
+                    
+                    <li><a href="narativ.html">Text narativ</a>
+                    <ul class="narativ">
+                        <li><a href="caragiale.html">I.L. Caragiale</a>
+                        <ul class="caragiale">
+                            <li><a href="o.html">"O scriosare pierdută"</a></li>
+                        </ul></li>
+                        <li><a href="slavic">Ioan Slavici</a>
+                        <ul class="slavici">
+                            <li><a href="mara.html">"Mara"</a></li>
+                            <li><a href="moara.html">"Moara cu noroc"</a></li>
+                        </ul></li>
+                        <li><a href="eliade.html">Mircea Eliade</a>
+                        <ul class="eliade">
+                            <li><a href="la.html">"La ȚigănciȚ</a></li>
+                            <li><a href="maitreyi.html">"Maitreyi"</a></li>
+                        </ul></li>
+                        <li><a href="sadoveanu.html">Mihail Sadoveanu</a>
+                        <ul class="sadoveanu">
+                            <li><a href="baltagul.html">"Baltagul"</a></li>
+                        </ul></li>
+                        <li><a href="rebreanu.html">Liviu Rebreanu</a>
+                        <ul class="rebreanu">
+                            <li><a href="ion.html">"Ion"</a></li>
+                        </ul></li>
+                        <li><a href="petrescu.html">Camil Petrescu</a>
+                        <ul class="petrescu">
+                            <li><a href="ultima.html">"Ultima noapte de dragoste,întâia noapte de război"</a></li>
+                            <li><a href="patul.html">"Patul lui Procust"</a></li>
+                            <li><a href="jocul.html">"Jocul Ielelor"</a></li>
+                            <li><a href="suflete.html">"Suflete tari"</a></li>
+                        </ul></li>
+                        <li><a href="calinescu.html">George Calinescu</a>
+                        <ul class="calinescu">
+                            <li><a href="enigma.html">"Enigma Otiliei"</a></li>
+                        </ul></li>
+                        <li><a href="preda.html">Marin Preda</a>
+                        <ul class="preda">
+                            <li><a href="morometii.html">"Moromeții"</a></li>
+                            <li><a href="cel.html">"Cel mai iubit dintre pământeni"</a></li>
+                        </ul></li>
+                        <li><a href="sorescu.html">Marin Sorescu</a>
+                        <ul class="sorescu">
+                            <li><a href="iona.html">"Iona"</a></li>
+                        </ul></li>
+                        <li><a href="creanga.html">Ion Creanga</a>
+                        <ul class="creanga">
+                            <li><a href="povestea.html">"Povestea lui Harap-Alb"</a></li>
+                        </ul></li>
+                        <li><a href="negruzzi.html">Costache Negruzzi</a>
+                        <ul class="negruzzi">
+                            <li><a href="lapusneanu.html">"Alexandru Lăpușneanu"</a></li>
+                        </ul></li>
+                        <li><a href="nedelciu.html">Mircea Nedelciu</a>
+                        <ul class="nedelciu">
+                            <li><a href="zmeura.html">"Zmeura de câmpie"</a></li>
+                        </ul></li>
+                        
+                    </ul></li>
+                </ul>
+                <li><a href="alti autori.html">Alți scriitori &#8801;</a>
+                <ul class="alti">
+                    <li><a href="nationali.html">Naționali</a></li>
+                    <li><a href="internationali.html">Internaționali</a></li>
+                </ul>
+                </li>
+                <li><a href="compunem.html">Compunem..</a></li>
+                <li><a href="despre noi.html">Despre noi</a></li>
+            </ul>
+         </div>
+
+         
+         <p class="pre1"> <form action="action_page.html">
+            <label for="fname" class="nume">Prenume:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname" class="nume">Nume:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" value="Submit" class="nume">
+         </form></p>
+         <style>
+            .nume{
+                font-weight: bold;
+                color:whitesmoke;
+                margin-left: 200px;
+                font-size: 20px;
+                
+            }
+            .nume:hover{
+                color:rgb(201, 114, 114);
+            }
+            .pre1{
+                margin-top: 80px;
+                
+
+            }
+            
+            
+         </style>
+
+         <p class="nr"><label class="nu"for="country" class="orasul">Orașul de proveniență</label></br>
+         <select id="country" name="country" >
+           <option value="australia" class="oras">București</option>
+           <option value="canada"class="oras">Cluj-Napoca</option>
+           <option value="usa"class="oras">Iași</option>
+           <option value="usa"class="oras">Constanța</option>
+           <option value="usa"class="oras">Timișoara</option>
+           <option value="usa"class="oras">Brașov</option>
+           <option value="usa"class="oras">Craiova</option>
+           <option value="usa"class="oras">Galați</option>
+           <option value="usa"class="oras">Oradea</option>
+           <option value="usa"class="oras">Ploiești</option>
+           <option value="usa"class="oras">Brăila</option>
+           <option value="usa"class="oras">Arad</option>
+           <option value="usa"class="oras">Pitești</option>
+           <option value="usa"class="oras">Bacău</option>
+           <option value="usa"class="oras">Sibiu</option>
+
+         </select></p>
+         <style>
+            .nu{
+                margin-top:70px;
+            }
+            .oras{
+                font-weight: bold;
+                color:whitesmoke;
+                font-size: 14px;
+            }
+            .oras:hover{
+                color:rgb(201, 114, 114);
+            }
+            .nr{
+                font-weight: bold;
+                color:whitesmoke;
+                margin-left: 200px;
+                font-size: 20px;
+                margin-top:80px;
+                
+            }
+            .nr:hover{
+                color:rgb(201, 114, 114);
+            }
+            .orasul{
+                font-weight: bold;
+                color:whitesmoke;
+                margin-left: 200px;
+                font-size: 20px;
+               
+            }
+         </style>
+         <p class="pre"><form action="action_page.html">
+            <label for="lname" class="ai">Ai un mesaj pentru noi?</label>
+            <input type="text" id="lmes" name="lmes"><br><br>
+            <input type="submit" value="Submit" class="ai">
+          </form></p>
+          <style>
+            .ai{font-weight: bold;
+                color:whitesmoke;
+                margin-left: 200px;
+                font-size: 20px;
+
+            }
+            .ai:hover{
+                color:rgb(201, 114, 114);
+            }
+            .pre{
+                margin-top:70px;
+                font-weight: bold;
+                color:whitesmoke;
+                margin-left: 200px;
+                font-size: 20px;
+                
+            }
+            .pre:hover{
+                color:rgb(201, 114, 114);
+            }
+            </style>
+            
+            
+          
+            <p class="istoria" >Istoria site-urilor web începe în anii 1990, odată cu dezvoltarea și popularizarea internetului.Anii 1990: În această perioadă, site-urile web erau simple și primare, constând în pagini statice cu text și imagini. Anii 2000: Odată cu avansul tehnologic, site-urile web au devenit mai interactive și complexe. Au apărut funcții precum formularele online, animațiile Flash și stilurile de design mai elaborate.Astăzi, site-urile web sunt extrem de variate și complexe, de la site-uri de comerț electronic și portaluri de știri la bloguri personale și platforme de învățare online. Tehnologiile web continuă să se dezvolte, iar viitorul site-urilor web este strâns legat de noile inovații și cerințele utilizatorilor.  </p>
+          <p class="noi" >Noi am plecat pe acest drum cu dorința de a învăța,de a ne familiariza cu viitorul.Dorim nu doar sa participăm,dar și să promovam și progresăm în acest domeniu.<b>Am ales să folosim un limbaj puțin cunoscut(html,css,js) pentru a explica un limbaj cunoscut de noi toți,limba română.</b></p>
+          <style>
+            .istoria {
+                width:40%;
+                margin-left:800px;
+                color:whitesmoke;
+                margin-top:-340px;
+                text-align: center;
+                font-size: 17px;
+                
+            }
+            .istoria:hover{
+                color:rgb(201, 114, 114);
+            }
+            .noi {
+                width:40%;
+                margin-left:800px;
+                color:whitesmoke;
+                margin-top:-1px;
+                text-align:center;
+                font-size: 17px;
+            }
+            .noi:hover{
+                color:rgb(201, 114, 114);
+            }
+            .footer{
+                margin-right: 2px;
+                display: inline-block;
+            }
+          </style>
+          
+          <footer>
+            <button onclick="window.open('home.html ')" class="ua"> Home </button>
+        <style>
+
+            .ua{
+                background:#d60917;
+                 padding: 14px 40px;
+                display: inline-block;
+                color: #fff;
+                font-size: 18px;
+                margin-top: 100px;
+                margin-left: 100px;
+                border-radius:30px ;
+                margin-left: 700px;
+                margin-right: auto;
+                margin-bottom: 100px;
+                text-align:center;
+            }
+            .ua:hover{
+                background-color:#6f252a;
+
+            }
+            </style>
+            
+            
+         </footer>
+   
+    </body>
+
+</html>

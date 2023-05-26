@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <title>LitRo</title>
+      
+      <style>
+         *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            background: #1d2026 ;
+        }
+        .dropdown{
+            display:flex;
+            justify-content:center;
+            margin-top:30px;
+            list-style-type:none;
+
+        }
+        a{
+            display:block;
+            width:200px;
+            background-color: #1d2026;
+            color:rgb(255, 255, 255);
+            padding:10px 0;
+            font-size:1.2rem;
+            text-decoration:none;
+            text-align:center;
+        }
+        a:hover{
+            background-color: rgb(201, 114, 114);
+        }
+        .bac{
+            list-style-type:none;
+            display:none;
+        }
+        .dropdown li:nth-child(1):hover .bac{
+            display:block;
+        }
+        .alti{
+            list-style-type:none;
+            display:none;
+        }
+        .dropdown li:nth-child(2):hover .alti{
+            display:block;
+        }
+        .poezie{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .bac li:nth-child(1):hover .poezie{
+            display:block;
+        }
+        .narativ{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .bac li:nth-child(2):hover .narativ{
+            display:block;
+        }
+        .eminescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+
+        }
+        .poezie li:nth-child(1):hover .eminescu{
+            display:block;
+        }
+        .alexandrescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(2):hover .alexandrescu{
+            display:block;
+        }
+        .alecsandri{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(3):hover .alecsandri{
+            display:block;
+        }
+        .goga{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(4):hover .goga{
+            display:block;
+        }
+        .cosbuc{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(5):hover .cosbuc{
+            display:block;
+        }
+        .bacovia{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(6):hover .bacovia{
+            display:block;
+        }
+        .arghezi{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(7):hover .arghezi{
+            display:block;
+        }
+        .barbu{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(8):hover .barbu{
+            display:block;
+        }
+        .blaga{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(9):hover .blaga{
+            display:block;
+        }
+        .voinea{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(10):hover .voinea{
+            display:block;
+        }
+        .stanescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(11):hover .stanescu{
+            display:block;
+        }
+        .pillat{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(12):hover .pillat{
+            display:block;
+        }
+        .voiculescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(13):hover .voiculescu{
+            display:block;
+        }
+        .caragiale{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .narativ li:nth-child(1):hover .caragiale{
+            display:block;
+        }
+        .slavici{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .narativ li:nth-child(2):hover .slavici{
+            display:block;
+        }
+        .eliade{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(3):hover .eliade{
+            display:block;
+        }
+        .sadoveanu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(4):hover .sadoveanu{
+            display:block;
+        }
+        .rebreanu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(5):hover .rebreanu{
+            display:block;
+        }
+        .petrescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(6):hover .petrescu{
+            display:block;
+        }
+        .calinescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(7):hover .calinescu{
+            display:block;
+        }
+        .preda{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(8):hover .preda{
+            display:block;
+        }
+        .sorescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(9):hover .sorescu{
+            display:block;
+        }
+        .creanga{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(10):hover .creanga{
+            display:block;
+        }
+        .negruzzi{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(11):hover .negruzzi{
+            display:block;
+        }
+        .nedelciu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(12):hover .nedelciu{
+
+            display:block;
+        }
+        .nationali{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .alti li:nth-child(1):hover .nationali{
+            display:block;
+        }
+        .internationali{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .alti li:nth-child(2):hover .internationali{
+            display:block;
+        }
+            
+        
+
+
+    </style>
+    </head>
+    <body>
+  
+        
+         <div class="container">
+            <ul class="dropdown">
+                <li><a href="bac.html">BAC &#8801;</a>
+                <ul class="bac">
+                    <li><a href="poezie.html">Poezie</a>
+                    <ul class="poezie">
+                        <li><a href="eminescu.html">Mihai Eminescu</a>
+                        <ul class="eminescu">
+                            <li><a href="luceafarul.html">"Luceafărul"</a></li>
+                            <li><a href="floare.html">"Floare albastră"</a></li>
+                            </ul></li>
+                        <li><a href="alexandrescu.html">Grigore Alexandrescu</a>
+                        <ul class="alexandrescu">
+                            <li><a href="umbra.html">"Umbra lui Mircea la Cozia"</a></li>
+                        </ul></li>
+                        <li><a href="alecsandri.html">Vasile Alecsandri</a>
+                        <ul class="alecsandri">
+                            <li><a href="malul.html">"Malul Siretului"</a></li>
+                        </ul></li>
+                        <li><a href="goga.html">Octavian Goga</a>
+                        <ul class="goga">
+                            <li><a href="de.html">"De demult"</a></li>
+                            <li><a href="rugaciune.html">"Rugăciune"</a></li>
+                        </ul></li>
+                        <li><a href="cosbuc.html">George Coșbuc</a>
+                        <ul class="cosbuc">
+                            <li><a href="moartea.html">"Moartea lui Fulger"</a></li>
+                        </ul> </li>
+                        <li><a href="bacovia.html">George Bacovia</a>
+                        <ul class="bacovia">
+                            <li><a href="plumb.html">"Plumb"</a></li>
+                            <li><a href="#">"Lacustră"</a></li>
+                        </ul></li>
+                        <li><a href="arghezi">Tudor Arghezi</a>
+                        <ul class="arghezi">
+                            <li><a href="testament.html">"Testament"</a></li>
+                            <li><a href="flori.html">"Flori de mucigai"</a></li>
+                        </ul></li>
+                        <li><a href="barbu.html">Ion Barbu</a>
+                        <ul class="barbu">
+                            <li><a href="riga.html">"Riga Crypto si Lapona Enigel"</a></li>
+                        </ul></li>
+                        <li><a href="blaga.html">Lucian Blaga</a>
+                        <ul class="blaga">
+                            <li><a href="eu.html">"Eu nu strivesc corola de minuni a lumii"</a></li>
+                        </ul></li>
+                        <li><a href="vinea.html">Ion Vinea</a>
+                        <ul class="voinea">
+                            <li><a href="ora.html">"Ora fântânilor"</a></li>
+                        </ul></li>
+                        <li><a href="stanescu.html">Nichita Stănescu</a>
+                        <ul class="stanescu">
+                            <li><a href="leoaica.html">"Leoaică,tânără,iubirea.."</a></li>
+                        </ul></li>
+                        <li><a href="pillat.html">Ion Pillat</a>
+                        <ul class="pillat">
+                            <li><a href="aci.html">"Aci sosi pe vremuri"</a></li>
+                        </ul></li>
+                        <li><a href="voiculescu.html">Vasile Voiculescu</a>
+                        <ul class="voiculescu">
+                            <li><a href="in.html">"În grăadina Ghetsemani"</a></li>
+                        </ul></li>
+                    </ul></li>
+                    
+                    <li><a href="narativ.html">Text narativ</a>
+                    <ul class="narativ">
+                        <li><a href="caragiale.html">I.L. Caragiale</a>
+                        <ul class="caragiale">
+                            <li><a href="o.html">"O scriosare pierdută"</a></li>
+                        </ul></li>
+                        <li><a href="slavic">Ioan Slavici</a>
+                        <ul class="slavici">
+                            <li><a href="mara.html">"Mara"</a></li>
+                            <li><a href="moara.html">"Moara cu noroc"</a></li>
+                        </ul></li>
+                        <li><a href="eliade.html">Mircea Eliade</a>
+                        <ul class="eliade">
+                            <li><a href="la.html">"La ȚigănciȚ</a></li>
+                            <li><a href="maitreyi.html">"Maitreyi"</a></li>
+                        </ul></li>
+                        <li><a href="sadoveanu.html">Mihail Sadoveanu</a>
+                        <ul class="sadoveanu">
+                            <li><a href="baltagul.html">"Baltagul"</a></li>
+                        </ul></li>
+                        <li><a href="rebreanu.html">Liviu Rebreanu</a>
+                        <ul class="rebreanu">
+                            <li><a href="ion.html">"Ion"</a></li>
+                        </ul></li>
+                        <li><a href="petrescu.html">Camil Petrescu</a>
+                        <ul class="petrescu">
+                            <li><a href="ultima.html">"Ultima noapte de dragoste,întâia noapte de război"</a></li>
+                            <li><a href="patul.html">"Patul lui Procust"</a></li>
+                            <li><a href="jocul.html">"Jocul Ielelor"</a></li>
+                            <li><a href="suflete.html">"Suflete tari"</a></li>
+                        </ul></li>
+                        <li><a href="calinescu.html">George Calinescu</a>
+                        <ul class="calinescu">
+                            <li><a href="enigma.html">"Enigma Otiliei"</a></li>
+                        </ul></li>
+                        <li><a href="preda.html">Marin Preda</a>
+                        <ul class="preda">
+                            <li><a href="morometii.html">"Moromeții"</a></li>
+                            <li><a href="cel.html">"Cel mai iubit dintre pământeni"</a></li>
+                        </ul></li>
+                        <li><a href="sorescu.html">Marin Sorescu</a>
+                        <ul class="sorescu">
+                            <li><a href="iona.html">"Iona"</a></li>
+                        </ul></li>
+                        <li><a href="creanga.html">Ion Creanga</a>
+                        <ul class="creanga">
+                            <li><a href="povestea.html">"Povestea lui Harap-Alb"</a></li>
+                        </ul></li>
+                        <li><a href="negruzzi.html">Costache Negruzzi</a>
+                        <ul class="negruzzi">
+                            <li><a href="lapusneanu.html">"Alexandru Lăpușneanu"</a></li>
+                        </ul></li>
+                        <li><a href="nedelciu.html">Mircea Nedelciu</a>
+                        <ul class="nedelciu">
+                            <li><a href="zmeura.html">"Zmeura de câmpie"</a></li>
+                        </ul></li>
+                        
+                    </ul></li>
+                </ul>
+                <li><a href="alti autori.html">Alți scriitori &#8801;</a>
+                <ul class="alti">
+                    <li><a href="nationali.html">Naționali</a></li>
+                    <li><a href="internationali.html">Internaționali</a></li>
+                </ul>
+                </li>
+                <li><a href="compunem.html">Compunem..</a></li>
+                <li><a href="despre noi.html">Despre noi</a></li>
+            </ul>
+         </div>
+         <header id="header">
+            
+            <nav class="tot">
+                <a href="#int" class="nav">INTRODUCEREA</a>
+                <a href="#tvd" class="nav">TEMA SI VIZIUNEA DESPRE LUME</a>
+                <a href="#pcp" class="nav">PARTICULARITATIILE DE CONSCTRUCTIE ALE PERSONAJULUI</a>
+                <a href="#rel" class="nav">RELATIA DINTRE DOUA PERSONAJE</a>
+                <a href="#st" class=nav>RELATIILE SPATIO-TEMPORALE</a>
+                <a href="#if" class="nav">RELATIILE SIMETRIE INCIPIT-FINAL</a>
+                <a href="#vr" class=nav>VIZIUNEA REALISTA</a>
+                <a href="#rez" class="nav">REZUMATUL</a>
+                <a href="#con" class="nav">CONCLUZIA</a>
+             </nav>
+
+         </header>
+         <section id="int">
+            <h1 class="h1">INTRODUCERE</h1>
+            <p class="s">Structura unei introduceri poate varia în funcție de tipul de compunere și de subiectul abordat. În general, o introducere bine structurată poate include următoarele elemente:
+
+                Captarea atenției: Poți începe introducerea cu o afirmație provocatoare, o întrebare retorică sau o anecdotă interesantă pentru a atrage atenția cititorului. Scopul este de a stârni curiozitatea și interesul pentru subiectul abordat.
+                
+                Contextualizarea subiectului: După captarea atenției, este important să oferi puțin context despre subiectul pe care urmează să-l discuți în compunere. Poți enumera câteva informații generale sau statistici relevante pentru a ilustra importanța și relevanța subiectului tău.
+                
+                Enunțarea temei și a viziunii tale: În această parte a introducerii, ar trebui să enunți clar tema pe care o vei explora în compunere și să îți exprimi viziunea personală asupra subiectului. Ai grijă să formulezi o frază concisă și coerentă care să evidențieze poziția ta.
+                
+                Prezentarea structurii compunerii: Înainte de a încheia introducerea, poți indica pe scurt cum va fi structurată compunerea ta. De exemplu, poți menționa că vei explora anumite aspecte ale subiectului, vei prezenta argumente sau exemple și vei oferi o concluzie.
+                
+                Este important să menții introducerea scurtă și la obiect, astfel încât să nu dezvălui prea multe detalii sau să te extinzi prea mult asupra subiectului. Scopul introducerii este de a pregăti terenul pentru dezvoltarea ulterioară a ideilor în corpul compunerii.</p>
+         </section>
+         <section id="tvd">
+            <h1 class="lume">TEMA SI VIZIUNEA DESPRE LUME</h1>
+            <p class="t">Compunerea temei și viziunii despre lume poate fi realizată în mai multe etape, urmând acești pași:
+
+                Definirea temei:
+                Începeți prin a alege o temă generală despre lume, cum ar fi: frumusețea naturii, diversitatea culturală, impactul tehnologiei sau relațiile interumane. Alegeți o temă care vă stârnește interesul și care vă permite să reflectați profund.
+                
+                Reflecție personală:
+                În acest pas, începeți să reflectați asupra propriilor experiențe, valorile și cunoștințele despre lume. Gândiți-vă la evenimente, persoane sau situații care v-au influențat în mod semnificativ perspectiva. Scrieți despre momentele care v-au făcut să vă simțiți conștient de lumea înconjurătoare și de locul vostru în ea.
+                
+                Cercetare și cunoaștere:
+                Pentru a-ți dezvolta viziunea despre lume, este important să fii informat și să explorezi diverse surse de cunoaștere. Citește cărți, articole, urmărește documentare sau discuții pe tema aleasă. Fă cercetări pentru a înțelege mai bine problemele și perspectivele diferite legate de această temă.
+                
+                Expunerea viziunii:
+                În acest pas, expuneți-vă viziunea personală despre lume, bazată pe reflecțiile și cercetările efectuate anterior. Gândiți-vă la valorile, principiile și ideile care vă ghidează în viață și care vă influențează perspectiva asupra lumii. Încercați să articulați această viziune într-un mod coerent și clar.
+                
+                Exemple și argumente:
+                Întăriți-vă viziunea despre lume prin prezentarea de exemple concrete și argumente solide. Puteți folosi experiențele personale, fapte și date relevante sau chiar citate inspiraționale pentru a susține punctele de vedere. Asigurați-vă că argumentele dvs. sunt logice și bine fundamentate.
+                
+                Concluzie:
+                În final, încheiați componerea sumarizând viziunea voastră despre lume și evidențiind importanța acesteia pentru voi. Reiterați principalele puncte de vedere și invitați cititorii să reflecteze asupra propriei lor viziuni și să-și dezvolte propriile lor perspectiva asupra lumii.
+                
+                Este important să vă asigurați că exprimați sinceritatea și autenticitatea viziunii voastre despre lume în compunerea dvs. Încercați să fiți deschiși și receptivi la perspectivele și ideile celorlalți, deoarece astfel puteți îmbogăți și mai mult înțelegerea și viziunea voastră despre lume.</p>
+         </section>
+         <section id="pcp">
+            <h1 class="part">PARTICULARITATI DE CONSTRUCTIE ALE PERSONAJULUI</h1>
+            <p class="cons">Construcția unui personaj într-o poveste sau într-un roman implică o serie de particularități care îl fac credibil, interesant și memorabil pentru cititori. Iată câteva aspecte importante de luat în considerare în construcția unui personaj:
+
+                Caracterizarea: Pentru a face un personaj realist, este esențial să-l caracterizezi în mod coerent și detaliat. Acest lucru include aspecte precum trăsături de personalitate, emoții, viziuni, dorințe și temeri. Creează un profil psihologic pentru personajul tău, astfel încât să poți înțelege motivațiile și reacțiile sale în diferite situații.
+                
+                Evoluția personajului: Personajele credibile au o dezvoltare și o evoluție pe parcursul povestirii. Aceasta poate fi o schimbare internă a personalității, o creștere a abilităților sau o înțelegere mai profundă a sinei. Asigură-te că personajul tău are o arcă narativă și că acțiunile sale sunt congruente cu această evoluție.
+                
+                Conflictul intern și extern: Personajele interesante se confruntă cu conflicte atât interne, cât și externe. Conflictul intern poate consta în decizii dificile, lupta cu propriile temeri sau confruntarea cu greșelile din trecut. Conflictul extern poate fi reprezentat de interacțiuni cu alți personaje, obstacole în îndeplinirea scopurilor sau situații dificile în mediul în care se află.
+                
+                Relații și interacțiuni: Personajele nu există în izolare, ci interacționează cu alte personaje din poveste. Construiește relații credibile și complexe între personaje, fie că este vorba de prietenii, rivalități sau relații de dragoste. Aceste interacțiuni pot oferi oportunități pentru dezvoltarea personajelor și pot contribui la dinamica narativă.
+                
+                Detaliile fizice și de mediu: Detaliile fizice ale unui personaj pot juca un rol important în construirea imaginii sale în mintea cititorului. Descrie în mod corespunzător trăsăturile fizice, îmbrăcămintea și gesturile personajului. De asemenea, ia în considerare mediul în care trăiește personajul și influența acestuia asupra comportamentului și alegerilor sale.
+                
+                Voce și limbaj distinctiv: Fiecare personaj ar trebui să aibă o voce și un limbaj distinctiv. Acest lucru include modul în care vorbește, expresiile preferate, folosirea unor cuvinte specifice sau tonul vocii. Această particularitate îi ajută pe cititori să facă distincție între personaje și să se conecteze mai profund cu fiecare dintre ele.
+                
+                Coerența și autenticitatea</p>
+         </section>
+         <section id="rel">
+            <h1 class="rela">RELATIA DINTRE DOUA PERSONAJE</h1>
+            <p class="doua">Relația dintre două personaje poate fi un aspect central și captivant al unei povești. Aceasta poate fi caracterizată de o gamă largă de dinamici și interacțiuni, iar modul în care este construită poate influența evoluția povestirii. Iată câteva aspecte importante de luat în considerare în construirea relației dintre două personaje:
+
+                Tipul de relație: Definește tipul de relație dintre personaje, cum ar fi prietenie, iubire, rivalitate, colaborare sau conflict. Fiecare tip de relație va aduce cu sine dinamici specifice și va influența comportamentul personajelor implicate.
+                
+                Interacțiuni și dialog: Relația dintre personaje se dezvoltă prin interacțiuni și dialog. Construiește scene în care personajele comunică, se confruntă sau colaborează. Folosește dialogul pentru a evidenția tensiuni, complicități sau dezacorduri între personaje și pentru a dezvălui sentimentele și gândurile lor.
+                
+                Conflict și rezoluție: Conflictul poate fi un element puternic în relația dintre două personaje. Acesta poate fi generat de diferențe de opinii, interese contradictorii sau chiar de trădări. Rezolvarea conflictului poate duce la o schimbare în relația personajelor sau la consolidarea legăturii lor.
+                
+                Evoluția relației: Relația dintre personaje poate suferi schimbări pe parcursul poveștii. Aceasta poate evolua de la o relație inițială tensionată la o alianță puternică sau poate trece de la o relație de prietenie la una de rivalitate. Asigură-te că evoluția relației este coerentă și credibilă, în concordanță cu dezvoltarea personajelor și cu evenimentele narative.
+                
+                Dependenta si interdependenta: Explorează dependența și interdependența dintre personaje. Poate exista un echilibru de putere între ele sau un personaj poate fi influențat sau susținut de celălalt. Aceasta poate crea conflicte și tensiuni, dar și oportunități de creștere și învățare pentru personaje.
+                
+                Simbolism și teme: Relația dintre două personaje poate fi utilizată pentru a transmite simbolism sau pentru a explora anumite teme. De exemplu, relația dintre un mentor și un ucenic poate evidenția tema transmiterii cunoașterii sau a dezvoltării personale.
+                
+                Efectul asupra povestii: Relația dintre personaje poate influența cursul și rezoluția povestirii. Aceasta poate avea un impact semnificativ asupra acțiunii și poate determina alegerile și deciziile personajelor implicate.</p>
+         </section>
+         <section id="st">
+            <h1 class="spa">RELATIILE SPATIO-TEMPORALE</h1>
+            <p class="tio">Relațiile spațio-temporale se referă la conexiunile și interacțiunile dintre spațiu și timp într-un context dat. Aceste relații sunt esențiale în construirea unei povești sau a unei narative coerente. Iată câteva aspecte de luat în considerare în relațiile spațio-temporale:
+
+                Spațiu fizic: Spațiul fizic se referă la locul în care se desfășoară acțiunea. Este important să descrii în mod corespunzător locațiile și mediul în care se află personajele, deoarece acesta poate influența acțiunile și interacțiunile lor. Poți crea o hartă imaginară a locațiilor importante sau poți folosi descrieri detaliate pentru a reda atmosfera și caracteristicile spațiului.
+                
+                Timp cronologic: Timpul cronologic se referă la ordinea evenimentelor într-o poveste. Este important să ai o structură temporală clară și coerentă pentru a asigura înțelegerea și urmărirea acțiunii. Poți utiliza elemente precum analepse (reminiscențe) sau prolepse (anticipări) pentru a introduce flash-back-uri sau flash-forward-uri și a adăuga complexitate temporală poveștii.
+                
+                Ritm și temporalitate: Ritmul și temporalitatea pot varia în funcție de tonul și scopul poveștii. Unele povești se desfășoară într-un timp comprimat, cu evenimente care se petrec rapid, în timp ce altele pot acoperi o perioadă extinsă de timp, permițând personajelor să sufere schimbări și evoluții semnificative. Asigură-te că ritmul narativ este corespunzător tonului și mesajului povestirii tale.
+                
+                Manipularea timpului: În anumite cazuri, autorii pot alege să manipuleze timpul pentru a crea efecte specifice în poveste. Aceasta poate include utilizarea salturilor temporale, a non-liniarității temporale sau a buclei temporale. Aceste elemente pot adăuga un nivel suplimentar de complexitate și interes în poveste, dar trebuie folosite cu atenție pentru a evita confuzia cititorilor.
+                
+                Efectele spațiale și temporale: Relațiile spațio-temporale pot avea un impact semnificativ asupra personajelor și a acțiunii. De exemplu, un spațiu închis și restrictiv poate crea tensiune și frustare, în timp ce o călătorie prin spațiu poate deschide noi oportunități și provocări pentru personaje. De asemenea, schimbările de timp pot afecta evoluția personajelor și pot genera revelații și înțelegeri noi.
+                
+                Coerența și continuitate: Pentru a menține o poveste coerentă, asigură-te că relațiile spațio-temporale sunt corespunzătoare</p>
+         </section>
+         <section id="if">
+            <h1 class="inc">RELATIILE INCIPIT-FINAL</h1>
+            <p class="fin">Relațiile dintre incipit (începutul) și finalul unei povești pot juca un rol crucial în crearea unei structuri narative puternice și în transmiterea unui mesaj sau a unei înțelesuri profunde. Iată câteva aspecte de luat în considerare în relațiile dintre incipit și final:
+
+                Coerența tematică: Incipitul și finalul ar trebui să aibă o coerență tematică, adică să abordeze aceleași idei, teme sau motive principale. Aceasta poate crea o legătură simbolică între început și sfârșit și poate sublinia un anumit înțeles sau mesaj pe care autorul dorește să-l transmită.
+                
+                Evoluția personajelor: Relația dintre incipit și final poate reflecta evoluția personajelor principale. Personajele pot experimenta o transformare sau o dezvoltare pe parcursul poveștii, iar această schimbare poate fi evidentă în comparația dintre modul în care personajele sunt prezentate la început și modul în care sunt prezentate la sfârșitul povestirii.
+                
+                Rezolvarea conflictului: Un aspect important în relația dintre incipit și final este modul în care conflictul este rezolvat. Incipitul poate prezenta conflictul inițial sau provocarea care stârnește povestea, iar finalul ar trebui să ofere o rezoluție satisfăcătoare a conflictului sau o încheiere coerentă a poveștii.
+                
+                Simetrie și echilibru: Uneori, incipitul și finalul pot fi construite într-o manieră simetrică, reflectând un echilibru între început și sfârșit. Aceasta poate crea o senzație de satisfacție și completitudine pentru cititori și poate sublinia structura narativă a poveștii.
+                
+                Reflexia sau sublinierea înțelesului: Incipitul și finalul pot fi utilizate pentru a sublinia un anumit înțeles sau mesaj cheie al poveștii. Aceasta poate fi realizată prin repetiția unor simboluri, fraze sau imagini, prin schimbarea percepției personajelor sau prin dezvăluirea unor informații noi la final care oferă o perspectivă diferită asupra începutului.
+                
+                Transformarea cititorului: Relația dintre incipit și final poate avea și un impact asupra cititorului. Prin modul în care povestea se dezvoltă și se încheie, cititorul poate experimenta o schimbare de perspectivă, o înțelegere profundă sau o emoție puternică. Aceasta poate crea o legătură emoțională între cititor și poveste și poate contribui la impactul narativ al întregii opere.</p>
+         </section>
+         <section id="vr">
+            <h1 class="viz">VIZIUNEA REALISTA</h1>
+            <p class="opera">Viziunea realistă într-o operă literară se referă la abordarea și reprezentarea detaliată a realității și a vieții cotidiene. Aceasta implică portretizarea personajelor și a evenimentelor într-un mod credibil și autentic, cu accent pe aspectele concrete și verosimile ale existenței umane. Iată câteva caracteristici ale unei viziuni realiste într-o operă:
+
+                Observația și descrierea minuțioasă: Autorul se concentrează pe observarea atentă a detaliilor și pe descrierea precisă a personajelor, locațiilor și situațiilor. Aceasta include elemente precum aspectul fizic al personajelor, limbajul lor, gesturile și interacțiunile cu mediul înconjurător.
+                
+                Portretizarea umană complexă: Viziunea realistă explorează diversitatea și complexitatea umană prin prezentarea personajelor într-un mod realist și credibil. Personajele pot avea trăsături pozitive și negative, iar acțiunile și alegerile lor sunt influențate de dorințe, temeri, motivații și condiționări sociale.
+                
+                Rezistența la idealizare: În opoziție cu viziunile romantice sau idealiste, viziunea realistă evită exagerarea sau idealizarea personajelor și situațiilor. Aceasta reflectă existența umană în toată complexitatea și contradicția sa, evidențiind imperfecțiunile, conflictele și dificultățile vieții de zi cu zi.
+                
+                Context social și istoric: O viziune realistă ține cont de contextul social și istoric în care se desfășoară povestea. Autorul poate explora probleme sociale, economice, politice sau culturale, reflectând realitățile și tensiunile specifice unei anumite perioade sau societăți.
+                
+                Critica și comentariul social: Viziunea realistă poate aduce în prim-plan probleme și aspecte critice ale societății sau ale umanității în general. Aceasta poate critica normele sociale, inegalitatea, injustiția sau alte probleme relevante pentru societatea în care opera este creată.
+                
+                Plauzibilitate și credibilitate: Viziunea realistă se bazează pe plauzibilitate și credibilitate. Situațiile și evenimentele prezentate trebuie să fie realiste și să fie în concordanță cu logica și regulile lumii în care se desfășoară povestea. Aceasta asigură că cititorul poate conecta și se poate identifica mai ușor cu povestea și personajele.</p>
+         </section>
+         <section id="rez">
+            <h1 class="rezu">REZUMATUL</h1>
+            <p class="unui">Construirea unui rezumat eficient implică capturarea esenței unei povești sau a unei lucrări și prezentarea sa într-un mod concis și clar. Iată câteva sfaturi pentru construirea unui rezumat reușit:
+
+                Identifică punctele cheie: Înțelege povestea sau lucrarea în ansamblul său și identifică cele mai importante aspecte ale acesteia, cum ar fi personajele principale, conflictul, evenimentele semnificative și rezoluția.
+                
+                Păstrează concizia: Un rezumat eficient trebuie să fie scurt și concis. Evită detalii inutile sau subpovestiri și concentrează-te pe elementele esențiale care definesc povestea sau lucrarea.
+                
+                Menționează elementele de bază: Într-un rezumat, ar trebui să includem cel puțin câteva informații despre protagoniști, locații, timpul și evenimentele principale. Asigură-te că aceste elemente sunt clare și ușor de înțeles pentru cititor.
+                
+                Urmează ordinea cronologică sau narativă: De obicei, este recomandat să urmezi ordinea cronologică sau narativă a poveștii în rezumat. Aceasta ajută la înțelegerea și urmărirea acțiunii și evoluției personajelor.
+                
+                Evită spoiler-ele majore: Dacă rezumați o lucrare sau un film, ai grijă să nu dezvălui detalii importante sau revelații cheie care ar putea strica experiența cititorului sau a spectatorului.
+                
+                Stilul și tonul: Stilul și tonul rezumatului ar trebui să fie neutre și obiective, în concordanță cu stilul și tonul lucrării originale. Evită interpretările sau evaluările personale în rezumat.
+                
+                Revizuiește și editează: După ce ai scris rezumatul, asigură-te că revizuiești și editezi în mod atent pentru a elimina orice confuzie sau incoerențe și pentru a obține un rezumat clar și coerent.
+                
+                Sintetizează concluzia sau mesajul: În cazul unei lucrări mai lungi sau mai complexe, rezumatul poate include o sinteză a concluziei sau a mesajului principal al poveștii. Aceasta oferă cititorului o idee despre înțelesul mai profund al lucrării.
+                
+                Reține că un rezumat este o prezentare succintă a poveștii sau lucrării și nu înlocuiește experiența completă a lecturii sau vizionării. Scopul său este să ofere o imagine generală și să stârnească interesul cititorului de a explora mai mult lucrarea în sine.</p>
+         </section>
+         <section id="con">
+            <h1 class="concluzia">CONCLUZIA</h1>
+            <p class="text">Construirea unei concluzii eficiente presupune încorporarea ideilor și temelor principale ale unui text sau unei lucrări într-o rezumare finală și într-un mod convingător. Iată câteva sfaturi pentru construirea unei concluzii reușite:
+
+                Rezumatul ideilor principale: Recapitulează succint ideile principale ale lucrării sau textului, evidențiind aspectele cheie abordate înainte de a încheia. Fii concis și selectează cele mai importante elemente pentru a oferi cititorului o imagine generală a conținutului.
+                
+                Restabilirea tezei sau mesajului principal: Adună în concluzie teza sau mesajul principal al lucrării și formulează-l într-un mod puternic și clar. Aceasta poate fi o oportunitate de a sublinia ideea principală și de a-i reaminti cititorului importanța și relevanța acesteia.
+                
+                Evidențierea contribuției și relevanței: Punctează importanța și relevanța lucrării sau a textului în contextul mai larg. Subliniază cum contribuie acestea la înțelegerea unui anumit subiect, la abordarea unei probleme sau la dezvoltarea unui domeniu de cercetare.
+                
+                Deschiderea spre perspective viitoare: O concluzie eficientă poate deschide calea spre posibile direcții de cercetare sau de reflecție suplimentară. Poți sugera întrebări nelămurite, aspecte neexplorate sau provocări ulterioare pentru a stimula gândirea și curiozitatea cititorului.
+                
+                Efectul asupra cititorului: Încheierea poate include și o referire la modul în care lucrarea sau textul a influențat cititorul. Poți menționa cum ați fost afectat personal de subiectul abordat sau cum v-ați schimbat perspectiva în urma lecturii respective.
+                
+                Stil și ton potrivit: Ajustează stilul și tonul concluziei în funcție de natura lucrării sau a textului. Poți utiliza un ton mai rezumativ și mai sintetic, dar, în același timp, asigură-te că concluzia este coerentă cu restul textului.
+                
+                Evitarea repetiției: În concluzie, evită repetarea detaliilor sau a argumentelor pe care le-ai prezentat deja în corpul lucrării. Concentrează-te pe idei noi și pe sintetizarea informațiilor cheie într-un mod original și captivant.
+                
+                Revizuire și editare: Asigură-te că revizuiești și editezi concluzia pentru a asigura coerența, claritatea și corectitudinea gramaticală. O concluzie bine elaborată și bine scrisă adaugă o notă de finalitate și își îndeplinește scopul de a încheia lucrarea într-un mod satisfăcător.</p>
+         </section>
+         <style>
+            .nav{
+                text-align: center;
+                margin-left: 180px;
+                font-size: 16px;
+                font-weight: 900;
+                width: max-content;
+                
+            }
+            .h1{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .h1:hover{
+                color:rgb(201, 114, 114);
+            }
+            .tot{
+                margin-top :70px;
+            }
+            .t{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .t:hover{
+                color:rgb(201, 114, 114);
+            }
+            .s{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .s:hover{
+                color:rgb(201, 114, 114);
+            }
+            .lume{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+
+            }
+            .lume:hover{
+                color:rgb(201, 114, 114);
+            }
+            .part{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .part:hover{
+                color:rgb(201, 114, 114);
+            }
+            .cons{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .cons:hover{
+                color:rgb(201, 114, 114);
+            }
+            .rela{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .rela:hover{
+                color:rgb(201, 114, 114);
+            }
+            .doua{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .doua:hover{
+                color:rgb(201, 114, 114);
+            }
+            .spa{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .spa:hover{
+                color:rgb(201, 114, 114);
+
+            }
+            .tio{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .tio{
+                color:rgb(201, 114, 114);
+            }
+            .inc{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .inc:hover{
+                color:rgb(201, 114, 114);
+            }
+            .fin{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .fin:hover{
+                color:rgb(201, 114, 114);
+            }
+            .viz{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .viz:hover{
+                color:rgb(201, 114, 114);
+            }
+            .opera{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .opera:hover{
+                color:rgb(201, 114, 114);
+            }
+            .rezu{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .rezu:hover{
+                color:rgb(201, 114, 114);
+            }
+            .unui{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .unui:hover{
+                color:rgb(201, 114, 114);
+            }
+            .concluzia{
+                margin-top: 50px;
+                text-align: center;
+                color:white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .concluzia:hover{
+                color:rgb(201, 114, 114);
+            }
+            .text{
+                font-size: large;
+                color:white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                width:80%;
+                text-align:center;
+                margin-bottom: 50px;
+            }
+            .text:hover{
+                color:rgb(201, 114, 114);
+            }
+
+
+            
+            
+
+         </style>
+          <footer>
+            <button onclick="window.open('index.html ')" class="ua"> Home </button>
+        <style>
+
+            .ua{
+                background:#d60917;
+                 padding: 14px 40px;
+                display: inline-block;
+                color: #fff;
+                font-size: 18px;
+                margin-top: 100px;
+                margin-left: 100px;
+                border-radius:30px ;
+                margin-left: 880px;
+                margin-right: auto;
+                margin-bottom: 100px;
+                text-align:center;
+            }
+            .ua:hover{
+                background-color:#6f252a;
+
+            }
+            </style>
+         </footer>
+         
+   
+    </body>
+
+</html>

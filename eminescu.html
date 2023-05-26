@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Document</title>
+      <title>LitRo</title>
+      <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            background: #1d2026 ;
+        }
+        .dropdown{
+            display:flex;
+            justify-content:center;
+            margin-top:-167px;
+            list-style-type:none;
+
+        }
+        a{
+            display:block;
+            width:200px;
+            background-color: #1d2026;
+            color:rgb(255, 255, 255);
+            padding:10px 0;
+            font-size:1.2rem;
+            text-decoration:none;
+            text-align:center;
+            margin-left: 10px;
+            
+        }
+        a:hover{
+            background-color: rgb(201, 114, 114);
+        }
+        .bac{
+            list-style-type:none;
+            display:none;
+        }
+        .dropdown li:nth-child(1):hover .bac{
+            display:block;
+        }
+        .alti{
+            list-style-type:none;
+            display:none;
+        }
+        .dropdown li:nth-child(2):hover .alti{
+            display:block;
+        }
+        .poezie{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .bac li:nth-child(1):hover .poezie{
+            display:block;
+        }
+        .narativ{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .bac li:nth-child(2):hover .narativ{
+            display:block;
+        }
+        .eminescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+
+        }
+        .poezie li:nth-child(1):hover .eminescu{
+            display:block;
+        }
+        .alexandrescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(2):hover .alexandrescu{
+            display:block;
+        }
+        .alecsandri{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(3):hover .alecsandri{
+            display:block;
+        }
+        .goga{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(4):hover .goga{
+            display:block;
+        }
+        .cosbuc{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(5):hover .cosbuc{
+            display:block;
+        }
+        .bacovia{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(6):hover .bacovia{
+            display:block;
+        }
+        .arghezi{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(7):hover .arghezi{
+            display:block;
+        }
+        .barbu{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(8):hover .barbu{
+            display:block;
+        }
+        .blaga{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(9):hover .blaga{
+            display:block;
+        }
+        .voinea{list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(10):hover .voinea{
+            display:block;
+        }
+        .stanescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(11):hover .stanescu{
+            display:block;
+        }
+        .pillat{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(12):hover .pillat{
+            display:block;
+        }
+        .voiculescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .poezie li:nth-child(13):hover .voiculescu{
+            display:block;
+        }
+        .caragiale{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .narativ li:nth-child(1):hover .caragiale{
+            display:block;
+        }
+        .slavici{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+        }
+        .narativ li:nth-child(2):hover .slavici{
+            display:block;
+        }
+        .eliade{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(3):hover .eliade{
+            display:block;
+        }
+        .sadoveanu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(4):hover .sadoveanu{
+            display:block;
+        }
+        .rebreanu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(5):hover .rebreanu{
+            display:block;
+        }
+        .petrescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(6):hover .petrescu{
+            display:block;
+        }
+        .calinescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(7):hover .calinescu{
+            display:block;
+        }
+        .preda{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(8):hover .preda{
+            display:block;
+        }
+        .sorescu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(9):hover .sorescu{
+            display:block;
+        }
+        .creanga{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(10):hover .creanga{
+            display:block;
+        }
+        .negruzzi{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(11):hover .negruzzi{
+            display:block;
+        }
+        .nedelciu{
+            list-style-type:none;
+            display:none;
+            transform:translateX(150px) translateY(-50px);
+            position:absolute;
+            
+        }
+        .narativ li:nth-child(12):hover .nedelciu{
+
+            display:block;
+        }
+
+    </style>
+
+
+
+    </head>
+    <body>
+        <img src="images/cold__smooth___tasty.__1_-removebg-preview.png"class="logo">
+        <style>
+            .logo{
+            width: 200px;
+             cursor: pointer;
+             margin-top: 10px;
+            margin-left: 50px;
+        }
+        
+        
+        </style>
+        
+         <div class="container">
+            <ul class="dropdown">
+                <li><a href="bac.html">BAC &#8801;</a>
+                <ul class="bac">
+                    <li><a href="poezie.html">Poezie</a>
+                    <ul class="poezie">
+                        <li><a href="eminescu.html">Mihai Eminescu</a>
+                        <ul class="eminescu">
+                            <li><a href="luceafarul.html">"Luceafărul"</a></li>
+                            <li><a href="floare.html">"Floare albastră"</a></li>
+                            </ul></li>
+                        <li><a href="alexandrescu.html">Grigore Alexandrescu</a>
+                        <ul class="alexandrescu">
+                            <li><a href="umbra.html">"Umbra lui Mircea la Cozia"</a></li>
+                        </ul></li>
+                        <li><a href="alecsandri.html">Vasile Alecsandri</a>
+                        <ul class="alecsandri">
+                            <li><a href="malul.html">"Malul Siretului"</a></li>
+                        </ul></li>
+                        <li><a href="goga.html">Octavian Goga</a>
+                        <ul class="goga">
+                            <li><a href="de.html">"De demult"</a></li>
+                            <li><a href="rugaciune.html">"Rugăciune"</a></li>
+                        </ul></li>
+                        <li><a href="cosbuc.html">George Coșbuc</a>
+                        <ul class="cosbuc">
+                            <li><a href="moartea.html">"Moartea lui Fulger"</a></li>
+                        </ul> </li>
+                        <li><a href="bacovia.html">George Bacovia</a>
+                        <ul class="bacovia">
+                            <li><a href="plumb.html">"Plumb"</a></li>
+                            <li><a href="lacustra.html">"Lacustră"</a></li>
+                        </ul></li>
+                        <li><a href="arghezi.html">Tudor Arghezi</a>
+                        <ul class="arghezi">
+                            <li><a href="testament.html">"Testament"</a></li>
+                            <li><a href="flori.html">"Flori de mucigai"</a></li>
+                        </ul></li>
+                        <li><a href="barbu.html">Ion Barbu</a>
+                        <ul class="barbu">
+                            <li><a href="riga.html">"Riga Crypto si Lapona Enigel"</a></li>
+                        </ul></li>
+                        <li><a href="blaga.html">Lucian Blaga</a>
+                        <ul class="blaga">
+                            <li><a href="eu.html">"Eu nu strivesc corola de minuni a lumii"</a></li>
+                        </ul></li>
+                        <li><a href="vinea.html">Ion Vinea</a>
+                        <ul class="voinea">
+                            <li><a href="ora.html">"Ora fântânilor"</a></li>
+                        </ul></li>
+                        <li><a href="stanescu.html">Nichita Stănescu</a>
+                        <ul class="stanescu">
+                            <li><a href="leoaica.html">"Leoaică,tânără,iubirea.."</a></li>
+                        </ul></li>
+                        <li><a href="pillat.html">Ion Pillat</a>
+                        <ul class="pillat">
+                            <li><a href="aci.html">"Aci sosi pe vremuri"</a></li>
+                        </ul></li>
+                        <li><a href="voiculecu.html">Vasile Voiculescu</a>
+                        <ul class="voiculescu">
+                            <li><a href="in.html">"În grăadina Ghetsemani"</a></li>
+                        </ul></li>
+                    </ul></li>
+                    
+                    <li><a href="narativ.html">Text narativ</a>
+                    <ul class="narativ">
+                        <li><a href="caragiale.html">I.L. Caragiale</a>
+                        <ul class="caragiale">
+                            <li><a href="o.html">"O scriosare pierdută"</a></li>
+                        </ul></li>
+                        <li><a href="slavici.html">Ioan Slavici</a>
+                        <ul class="slavici">
+                            <li><a href="mara.html">"Mara"</a></li>
+                            <li><a href="moara.html">"Moara cu noroc"</a></li>
+                        </ul></li>
+                        <li><a href="eliade.html">Mircea Eliade</a>
+                        <ul class="eliade">
+                            <li><a href="la.html">"La ȚigănciȚ</a></li>
+                            <li><a href="maitreyi.html">"Maitreyi"</a></li>
+                        </ul></li>
+                        <li><a href="sadoveanu.html">Mihail Sadoveanu</a>
+                        <ul class="sadoveanu">
+                            <li><a href="baltagul.html">"Baltagul"</a></li>
+                        </ul></li>
+                        <li><a href="rebreanu.html">Liviu Rebreanu</a>
+                        <ul class="rebreanu">
+                            <li><a href="ion.html">"Ion"</a></li>
+                        </ul></li>
+                        <li><a href="petrescu.html">Camil Petrescu</a>
+                        <ul class="petrescu">
+                            <li><a href="ultima.html">"Ultima noapte de dragoste,întâia noapte de război"</a></li>
+                            <li><a href="patul.html">"Patul lui Procust"</a></li>
+                            <li><a href="jocul.html">"Jocul Ielelor"</a></li>
+                            <li><a href="suflete.html">"Suflete tari"</a></li>
+                        </ul></li>
+                        <li><a href="calinescu.html">George Calinescu</a>
+                        <ul class="calinescu">
+                            <li><a href="enigma.html">"Enigma Otiliei"</a></li>
+                        </ul></li>
+                        <li><a href="preda.html">Marin Preda</a>
+                        <ul class="preda">
+                            <li><a href="morometii.html">"Moromeții"</a></li>
+                            <li><a href="cel.html">"Cel mai iubit dintre pământeni"</a></li>
+                        </ul></li>
+                        <li><a href="sorescu.html">Marin Sorescu</a>
+                        <ul class="sorescu">
+                            <li><a href="iona.html">"Iona"</a></li>
+                        </ul></li>
+                        <li><a href="creanga.html">Ion Creanga</a>
+                        <ul class="creanga">
+                            <li><a href="povestea.html">"Povestea lui Harap-Alb"</a></li>
+                        </ul></li>
+                        <li><a href="negruzzi.html">Costache Negruzzi</a>
+                        <ul class="negruzzi">
+                            <li><a href="alexandru.html">"Alexandru Lăpușneanu"</a></li>
+                        </ul></li>
+                        <li><a href="nedelciu.html">Mircea Nedelciu</a>
+                        <ul class="nedelciu">
+                            <li><a href="zmeura.html">"Zmeura de câmpie"</a></li>
+                        </ul></li>
+                        
+                    </ul></li>
+                </ul>
+                <li><a href="alti autori.html">Alți scriitori &#8801;</a>
+                <ul class="alti">
+                    <li><a href="nationali.html">Naționali</a></li>
+                    <li><a href="internationali.html">Internaționali</a></li>
+                </ul>
+                </li>
+                <li><a href="compunem.html">Compunem..</a></li>
+                <li><a href="despre noi.html">Despre noi</a></li>
+            </ul>
+         </div>
+         
+         <img src="images/image-removebg-preview (4).png" class="ma">
+         
+        
+            <p1 class="ta">
+                Mihai Eminescu
+            </p1>
+            <h1 class="da">       Mihai Eminescu (1850-1889) este considerat cel mai important poet român și una dintre cele mai mari figuri literare ale literaturii universale. Opera sa extinsă și variată explorează o gamă largă de teme, precum iubirea, natura, filosofia, politică și istoria, reflectând profunzimea și complexitatea gândirii sale.
+
+                     Operele lui Mihai Eminescu cuprind poezii, eseuri, traduceri și publicistică. Unele dintre cele mai remarcabile opere ale sale sunt:
+            
+                    Poezii lirice: Mihai Eminescu a creat o vastă colecție de poezii lirice, caracterizate de profunzimea sentimentelor și de expresivitatea limbajului. Poeziile sale explorează iubirea, melancolia, natura și transcendentalul. Printre cele mai cunoscute poezii ale sale se numără "Luceafărul", "Scrisoarea III", "Doina", "Mai am un singur dor" și "Floare albastră".
+            
+                    Eseuri: Eminescu a scris eseuri în care a abordat teme filosofice, politice și culturale. În eseul său "Geniu pustiu", el a discutat despre rolul și destinul geniului în societate. De asemenea, a abordat subiecte precum estetica, istoria și filosofia în scrierile sale.
+            
+                    Traduceri: Eminescu a fost un traducător prolific, aducând în limba română opere ale unor autori precum Johann Wolfgang von Goethe, Heinrich Heine și Edgar Allan Poe. A adus o contribuție valoroasă în transmiterea și popularizarea acestor opere în cultura română.
+
+                    Publicistică: Eminescu a scris și articole și comentarii politice și sociale în publicații ale vremii. A abordat subiecte legate de politica românească, cultura, istoria și problemele sociale ale societății din acea perioadă.
+            
+                    Stilul literar al lui Eminescu se caracterizează prin lirismul și expresivitatea sa, utilizând imagini puternice, metafore și simboluri. El a creat o limbă poetică distinctă și a explorat noțiuni complexe de metafizică și existență. Lucrările sale reflectă adâncimea gândirii și emoției umane, oferind cititorilor o experiență estetică și spirituală deosebită.
+            
+                    Mihai Eminescu a avut o influență profundă asupra literaturii române și a devenit un simbol al identității naționale. Operele sale continuă să fie apreciate și studiate în prezent și îl plasează printre cei mai mari poeți din literatura mondială.</h1>
+              
+                    <button onclick="window.open('mailto:mailul_tau@gmail.com?subject=Site pentru BAC!body=Uite ce site am gasit, hai sa invatam impreuna bla bla ')" class="ka"> Share </button>
+                    <button onclick="window.open('index.html ')" class="ua"> Home </button>
+            <style>
+
+                .ua{
+                    background:#d60917;
+                     padding: 14px 40px;
+                    display: inline-block;
+                    color: #fff;
+                    font-size: 18px;
+                    margin-top: -10px;
+                    margin-left: 100px;
+                    border-radius:30px ;
+                }  
+
+                .ma{
+                    margin-left: 30px;
+                    margin-top:100px ;
+                    width: fit-content;
+                    float: left;
+                }
+                .da{
+                    font-size: 20px;
+                    color:white;
+                    text-align:left;
+                    margin-left: 200px;
+                    margin-top: 250px;
+                   
+                }
+                
+                .da:hover{
+                    color:rgb(201, 114, 114);
+                    font-weight: 900;
+                }
+              
+                .ta{
+                    font-size: 50px;
+                    color:white;
+                    margin-left: 450px;
+                    margin-top: 100px;
+                    width: fit-content;
+                    float: left;
+                }
+                .ka{
+                    background:#d60917;
+                     padding: 14px 40px;
+                    display: inline-block;
+                    color: #fff;
+                    font-size: 18px;
+                    margin-top: 30px;
+                    margin-left: 500px;
+                    border-radius:30px ;
+                }
+
+            </style>
+    </body>
+
+</html>
